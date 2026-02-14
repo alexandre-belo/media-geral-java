@@ -21,7 +21,7 @@ public class Main {
         } while (frequencia < 0 || frequencia > 100);
 
         Aluno aluno = new Aluno(frequencia);
-        System.out.print("Quantas notas deseja inserir para o calculo da media? ");
+        System.out.print("Digite a quantidade de notas para o calculo da media: ");
 
         int quantidadeNotas = scanner.nextInt();
 
@@ -69,9 +69,9 @@ public class Main {
         double media = aluno.calcularMedia();
         boolean aprovado = aluno.estaAprovado(mediaCorte, frequenciaCorte);
 
-        System.out.println("\n Resultado final = ");
+        System.out.println("\n Resultado final: ");
         System.out.println("Notas: " + aluno.getNotas());
-        System.out.println("Média: " + media);
+        System.out.printf("Média: %.1f%n", media);
         System.out.println("Frequência: " + aluno.getFrequencia());
 
         if (aprovado) {
